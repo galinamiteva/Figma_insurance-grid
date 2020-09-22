@@ -1,0 +1,737 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600&display=swap');
+:root{
+    --gray_color:rgba(0,0,0,0.6);
+    --light-gray-color:#ebebeb;
+    --dark-gray-color:#a9a19e;
+    --black_color:#000000;
+    --white-color:#ffffff;
+    --backrg-one:#f17949;
+    --backgr-two:#c7ddea;
+    --backgr-third:#fab131;
+    --backgr-four:#e5e5e5;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.body{
+    background: var(--backgr-four);
+    font-size: 16px; /* ARBETA MED REM */
+    font-family: 'Frank Ruhl Libre', serif;
+}
+
+.wrapper{
+    max-width:62.625rem;
+    margin:0 auto;      
+}
+
+/*********************HEADER ********************/
+
+.hero{
+    width: 100%;
+    height: 34rem;    
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+}
+
+.box-left{
+    height: 100%;    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color:var(--backgr-two);
+             
+}
+
+.box-left-content{
+    flex-basis: 40%;    
+   /*  padding-top: 3.1rem;
+    padding-right: 9.38rem ;
+    padding-bottom: 0;
+    padding-left: 5rem; */
+    padding:3.1rem 9.38rem 0 5rem; 
+       
+}
+
+h2{
+    font-family: 'Frank Ruhl Libre', serif;    
+    font-size: 45px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+
+.header-h2{
+    padding-bottom: 0.65rem; 
+    color: var(--black_color);
+    font-weight: bold;   
+}
+
+p.header-p{
+    font-family: 'Fira Sans', sans-serif;  
+    font-weight: 500;     
+    line-height: 2rem; 
+    font-size: 0.87rem;
+    line-height: 1.68rem;
+    color:var(--gray_color);
+}
+
+span.white{
+    color: var(--white-color);
+}
+
+.box-left-picture-btn{
+    flex-basis:60%;
+    position: relative;
+    
+}
+
+.button-content{
+    position: absolute; /* pappa relatiive */
+    top:5rem;
+    left: 5rem;    
+}
+
+.box-left-picture-btn{
+    height: 100%;
+    width: 29.375rem;   
+    display: flex;
+    justify-content: flex-end;
+    background:url("img/image_fam.png") right bottom no-repeat;
+    margin-right: 0.3rem;
+    background-size: 57%;
+    
+}
+/* VARIANT a
+.box-left::before{
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background:url("img/image_fam.png") right bottom no-repeat;
+    z-index:-1; }*/
+
+
+
+/*********************UTILITIES********************/
+ .btn{
+    padding: 0.625rem 2.10rem; 
+    font-family: 'Fira Sans', sans-serif;;
+    font-size:0.625rem ; 
+    font-weight: bold;  
+    border: none;
+    line-height: 24px;
+    border-radius: 6.25rem;
+    color: rgba(0,0,0,0.8);
+    background:var(--white-color);
+    box-shadow: 0px 2px 0px rgba(0,0,0,0.1);
+}
+
+/*********************HEADER left********************/
+.box-right{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+}
+
+.box-right-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--backrg-one);
+}
+
+p.little{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 0.68rem;
+    font-weight:bold;    
+    line-height: 0.81rem;
+    letter-spacing: -0.02em;
+    color:var(--gray_color);
+    margin-bottom:0.3em;
+}
+
+.box-right-top-link{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 2rem;
+    line-height: 2.56rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: var(--white-color);
+}
+.box-right-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--backgr-third);
+}
+/************************ NAVIGATION *********************/
+
+.main-navigation{
+    display: flex;
+    justify-content: center;
+    background-color: var(--backgr-four);
+    
+}
+
+.navigation-list{
+    display: flex;
+    padding:1.25rem 0;       
+}
+
+.navigation-items{
+    padding-left:  3.7rem ;
+    padding-right: 3.7rem;
+    padding-bottom: 0;
+}
+
+.items-hyperlink{
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;    
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+    color: var(--black_color);
+
+}
+.items-hyperlink:hover{
+    opacity:0.4;
+}
+/* *************************BASIC CONTAINER ***************************/
+
+.basic-container{
+    position: relative;
+    height: 80.75rem; /* 612+680px */
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;       
+}
+
+.basic-container::before{
+    content:"";
+    position:absolute;
+    height: 50%;
+    width: 100%;
+    top: 0;
+    background:var(--dark-gray-color);    
+    z-index: -1;
+}
+
+.basic-container::after{
+    content:"";
+    position:absolute;
+    height: 50%;
+    width: 100%;
+    bottom: 0;
+    background:var(--backgr-third) ;
+    
+    z-index: -1;
+}
+.financial-container{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 5.6rem 6.3rem 0 5.94rem; 
+    
+}
+
+.financial-text{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 0.875rem;    
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: var(--gray_color);
+    padding-left: 6.3em;
+
+}
+.title-text{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 2.81rem;
+    line-height: 100%;
+    font-weight: 900;
+    letter-spacing: -0.02em;    
+    color: var(--white-color);
+    padding-bottom: 3rem;
+    
+}
+
+.button-title{
+padding-bottom:0;
+margin-bottom: 0;
+
+}
+.people{
+    padding-top: 2.2rem;
+    
+}
+.people-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    padding: 0 4.38rem;
+    grid-gap: 1em;
+    
+}
+.box{
+    width: 16rem;
+    height: 19.25rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: end;
+    border: none;
+    border-radius: 0.31rem;
+    background-color: var(--white-color);  
+
+}
+
+.box-pictire{
+    height: 9.375rem;
+    width:14.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transform: translateY(-25px);
+    background: chartreuse;
+}
+.people-info{
+    text-align: center;
+    padding:0 0.6rem;
+}
+.people-text{
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+    font-size: 0.77rem;  
+    text-align: center;
+    line-height: 1.125rem;
+    margin-top: 0.6rem;
+    color: var(--gray_color);   
+}
+.first-box{
+    background-color: var(--backgr-two);
+}
+
+.second-box{
+    background-color: var(--backgr-third);
+
+}
+
+.third-box{
+    background-color: var(--backrg-one);
+}
+
+
+.aboutus{
+    
+    display: flex;
+    justify-content: center;
+    padding-bottom:6.3rem; 
+    position: relative;
+    bottom:4.5rem ;
+
+}
+
+.aboutus-article{
+    text-align: center;
+    width: 27.625rem;
+}
+
+.article-title{
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 900;
+    font-size: 2.81rem;     
+    line-height: 100%;
+    color: var(--white-color);
+    padding-bottom: 1.3rem;
+}
+.article-text{
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: var(--gray_color);  
+}
+
+/**************************CARDS***************************/
+.cards{
+    width: 100%;
+    height: 42.5rem;  /* (340px*2)/16 */
+}
+
+.cards-container{
+    height: 100%;
+    width: 100%;  
+     
+}
+
+.cards-list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height: 100%;  
+}
+.cards-list-item{
+    display: grid;
+}
+
+.box-start{
+    align-content: center;
+    justify-content: center;
+    text-align: center;  
+    background-color: var(--backgr-two);  
+}
+
+.box-one, .box-three, .box-five{
+    background: var(--white-color);
+}
+
+.box-two{
+    background-color:var(--light-gray-color);
+}
+
+.box-four{
+    background-color: var(--backrg-one);
+}
+
+h4.number{
+    font-family: 'Frank Ruhl Libre', serif; 
+    font-weight: 900;
+    font-size: 2.19rem;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    color:rgba(0,0,0, 0.4) ;
+    padding-top: 0.1rem;    /* kan inte mer !! center */
+    padding-left: 0.9rem;
+}
+
+h4~p{
+    justify-self: center;
+    text-align: center;       
+    color: rgba(0,0,0, 0.7);
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.0625rem;
+    line-height: 1.25rem;    
+}
+/**************************SECTION TAKE ME ***************************/
+.take-me{
+    height: 4.25rem;
+    width: 100%; 
+     background-color:var(--dark-gray-color) ; 
+}
+.take-box{
+    height: 70%;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center; 
+  
+
+}
+
+ .take-box::before{
+    content: url(./img/Untitled.png);
+    height: 100%;
+    width: 100%;
+    padding-top: 1rem;
+    text-align: center;   
+ }
+
+
+ div > .back{                   
+    color: rgba(0,0,0, 0.7);
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.0625rem;
+    line-height: 1.25rem;  
+}
+/**************************FOOTER ************************************/
+
+.gray-block{
+    width: 100%;
+    height: 21.25rem;
+    background-color: #777574;
+}
+
+
+/*********************CONTACT ***************************/
+
+
+.contact-hero{
+    height:21.25rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--backgr-two);
+}
+
+.contact-hero::after{
+    content: url(./img/Man_och_baby.png);
+    height: 18.75rem;
+    position: absolute;
+    bottom:0;
+    right: 5.9rem;
+}
+
+.contact-navigation{
+    background-color: var(--white-color);
+}
+
+/*********************CONTACT-FORM ***************************/
+
+.contactform{
+    width: 100%;
+    height: 34rem;
+    background-color: #a9a19e;
+}
+
+.contactform-container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding-top: 5.9rem;
+    
+}
+
+.contact-title{
+    padding-left: 3rem;
+    color: var(--white-color);
+    
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    width: 334px;               /*  måste vara i px för att se bra */
+    
+}
+
+.submit-message{
+    align-self: flex-end;
+}
+
+.your-email{
+    width: 20.875rem;
+    height: 40px;               /*  måste vara i px för att se bra */
+    
+}
+
+
+ .message-text{
+     height: 10.375rem;
+     width: 20.875rem;
+    
+ }
+
+ .your-email, .message-text{     
+     border-radius: 0.1875rem;  /*2px*/
+     border: none;
+     margin: 0.88rem 0;    /* lite så */
+ }
+
+ .form-inner{
+    font-family: 'Fira Sans', sans-serif;  
+    font-weight: 700;     
+    line-height: 100%; 
+    font-size: 0.87rem;    
+    color:var(--white-color)
+ }
+
+ /*********************GUIDE MAP***************************/
+
+ .map{
+     height: 25.437rem;
+     width: 100%;
+    position: relative;
+    padding: 3.1rem 0 0 6.25rem;
+    background:url('./img/Guid.png');
+    
+ }
+
+.map::after{
+    content:url('./img/Vector.png');
+    position: absolute;
+    top:50%;
+    left:50%;
+    right:50%;
+    bottom:50%;
+}
+
+.map-container{
+    width: 20.18rem;
+    height: 12.875rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color:var(--backgr-third)
+}
+
+.map-title{
+color: var(--white-color);
+}
+
+
+.guide{
+    align-self: flex-start;
+    padding-left: 1.5rem;
+    font-family: 'Fira Sans', sans-serif; 
+    font-style: normal; 
+    font-weight: 500;     
+    line-height: 1.5rem; 
+    font-size: 0.87rem;    
+    color:rgba(255,255,255,0.8)
+}
+
+
+/**************************MEDIA QUERIES ***************************/
+
+@media only screen and (max-width:520px){
+    .hero{
+        grid-template-columns: 1fr;
+        height: 50rem;  /* lite så */
+    }
+
+    .box-left-content{
+        padding-left: 1rem;
+        padding-right: 1rem;
+      
+    }
+
+    .box-left-picture-btn{
+        max-width:23.43rem ;
+                
+    }
+
+ /*    
+.box-left-picture-btn{
+    flex-basis:60%;
+    position: relative;
+    
+}
+
+.button-content{
+    position: absolute; /* pappa relatiive 
+    top:5rem;
+    left: 5rem;    
+}
+
+.box-left-picture-btn{
+    height: 100%;
+    width: 29.375rem;   
+    display: flex;
+    justify-content: flex-end;
+    background:url("img/image_fam.png") right bottom no-repeat;
+    margin-right: 0.3rem;
+    background-size: 57%;
+
+ */
+    .box-left-picture-image{
+        width: 100%;
+    }
+    .button-content{
+        top: 1.25rem;
+        left:2rem;
+     
+    }
+
+    .main-navigation{
+        display: none;
+    }
+
+.basic-container{
+    height: 133.25rem;  /* (1580+500)/16 */
+}
+
+.basic-container::before{
+    height: 80%;      /* c/a 99rem/133.25rem */
+
+
+}
+
+.basic-container::after{
+    height: 20%;      
+}
+.financial-container{
+    grid-template-columns: repeat(1,1fr);
+   padding-left: 1.8rem;
+    padding-top: 2.8rem;
+    padding-bottom: 0;
+}
+.button-title{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-bottom:2rem;
+    text-align: justify;
+      
+}
+.button-finance{
+    display: none;
+}
+
+.financial-text{
+    padding-left: 0;
+    text-align: justify;
+    padding-bottom: 0;
+}
+
+.financial content{
+    padding-bottom: 0;  
+    
+}
+
+.people-container{
+    grid-template-columns: repeat(1,1fr);
+    row-gap: 4rem;
+    padding:0;
+}
+
+.aboutus{
+    height: 25rem;
+    padding:0 1.25rem;
+    align-items: center;
+}
+
+.cards{
+    height:85rem;
+}
+
+.cards-list{
+    grid-template-columns: repeat(1,1fr);
+}
+
+.paragraf-text{
+    padding: 0 6.875rem;
+}
+
+.box-three{
+    background-color:var(--white-color);   
+ }
+
+.box-two{
+    background-color: var(--light-gray-color);
+} 
+
+.take-me{
+    display: none;
+}
+
+
+}
+
